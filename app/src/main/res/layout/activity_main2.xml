@@ -66,16 +66,50 @@
                 <Button
                     android:id="@+id/button"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginTop="20dp"
-                    android:text="Sign Up" />
+                    android:background="@drawable/border"
+                    android:text="Sign Up"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/black" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Or Sign Up With Social Media."
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/icons8_google"
+                        android:tooltipText="Google" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/icons8_facebook" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/icons8_github" />
+                </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingTop="20dp"
                     android:text="Already Have an Account ?  Sign In"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/purple_500"
                     android:textStyle="bold" />
 
             </LinearLayout>
