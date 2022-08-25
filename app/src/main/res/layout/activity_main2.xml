@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -28,6 +29,15 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sign Up"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextTextEmailAddress"
@@ -46,12 +56,12 @@
                     android:inputType="textPassword" />
 
                 <EditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/editTextTextRePassword"
                     android:layout_width="wrap_content"
                     android:layout_height="62dp"
                     android:ems="15"
-                    android:hint="Enter Mobile Number"
-                    android:inputType="phone" />
+                    android:hint="ReEnter Password"
+                    android:inputType="textPassword" />
 
                 <Button
                     android:id="@+id/button"
@@ -59,6 +69,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="Sign Up" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:text="Already Have an Account ?  Sign In"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
