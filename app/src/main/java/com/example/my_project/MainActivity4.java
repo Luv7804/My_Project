@@ -3,6 +3,7 @@ package com.example.my_project;
 import static com.example.my_project.R.id.email;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,8 +18,8 @@ public class MainActivity4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         emailId = findViewById(email);
-//        Intent iNext = new Intent();
-//        String name = iNext.getStringExtra("name");
-//        emailId.setText(name);
+        Intent iNext = getIntent();
+        String name = iNext.getStringExtra("name");
+        emailId.setText(name);
     }
 }
