@@ -35,44 +35,46 @@
         tools:ignore="MissingConstraints">
         <Button
             android:id="@+id/btn1"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn2"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
-
         <Button
             android:id="@+id/btn3"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn4"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn5"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn6"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn7"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn8"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
 
         <Button
             android:id="@+id/btn9"
-            android:layout_marginLeft="10dp"
+            style="@style/AppTheme"
             android:onClick="check" />
     </GridLayout>
 
@@ -85,7 +87,7 @@
         android:layout_marginEnd="159dp"
         android:onClick="newGame"
         android:text="New Game"
-        style="@style/AppTheme"
+        app:backgroundTint="#D74CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +101,7 @@
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="64dp"
         android:text="Next"
+        app:backgroundTint="#D74CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
