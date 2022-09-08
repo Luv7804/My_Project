@@ -14,7 +14,6 @@ public class MainActivity3 extends AppCompatActivity {
     EditText email, pass;
     Button sign_in;
     SharedPreferences sharedPreferences;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity2 extends AppCompatActivity {
     Button sign_up;
     EditText email, pass, repass;
-
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         repass = findViewById(R.id.repass);
-
         Intent iNext = new Intent(MainActivity2.this, MainActivity4.class);
-
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
