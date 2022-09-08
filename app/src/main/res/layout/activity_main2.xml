@@ -48,7 +48,7 @@
                     android:inputType="textEmailAddress" />
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/pass"
                     android:layout_width="wrap_content"
                     android:layout_height="62dp"
                     android:ems="15"
@@ -56,7 +56,7 @@
                     android:inputType="textPassword" />
 
                 <EditText
-                    android:id="@+id/repassword"
+                    android:id="@+id/repass"
                     android:layout_width="wrap_content"
                     android:layout_height="62dp"
                     android:ems="15"
@@ -120,12 +120,4 @@
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name" />
-
-
 </LinearLayout>

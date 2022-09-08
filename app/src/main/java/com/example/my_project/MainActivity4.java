@@ -1,7 +1,5 @@
 package com.example.my_project;
 
-import static com.example.my_project.R.id.email;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,15 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity4 extends AppCompatActivity {
     TextView emailId;
+    TextView password;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
-        emailId = findViewById(email);
+        emailId = findViewById(R.id.email);
+        password = findViewById(R.id.password);
         Intent iNext = getIntent();
-        String name = iNext.getStringExtra("name");
+        String name = iNext.getStringExtra("email");
+        String pass = iNext.getStringExtra("password");
         emailId.setText(name);
+        password.setText(pass);
     }
 }
