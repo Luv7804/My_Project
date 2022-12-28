@@ -107,7 +107,7 @@
                         android:src="@drawable/icons8_github" />
                 </LinearLayout>
                 <TextView
-                    android:id="@+id/signin"
+                    android:id="@+id/sign_in"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingTop="20dp"
