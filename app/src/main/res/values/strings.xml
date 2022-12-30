@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My_Project</string>
+    <string name="app_name">APMC Mota Mahika</string>
     <string name="hint_wt">Enter Weight In KG.</string>
     <string name="hint_htF">Enter Height In Feet</string>
     <string name="hint_htI">Enter Height In Inches</string>
