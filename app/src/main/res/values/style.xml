@@ -9,5 +9,4 @@
         <item name="android:textStyle">bold</item>
         <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
-
 </resources>
