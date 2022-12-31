@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A.P.M.C. \n શ્રી ખેતીવાડી ઉત્પન્ન બજાર \n સમિતિ મોટા મહીકા"
+        android:text="A.P.M.C. \nશ્રી ખેતીવાડી ઉત્પન્ન બજાર સમિતિ મોટા મહીકા"
         android:textAlignment="center"
-        android:textSize="50dp" />
+        android:textSize="40dp" />
 </LinearLayout>
