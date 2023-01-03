@@ -13,21 +13,23 @@
         android:theme="@style/Theme.My_Project"
         tools:targetApi="31">
         <activity
+            android:name=".DainikBhav"
+            android:exported="false"></activity>
+        <activity
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
             android:name=".MainActivity3"
-            android:theme="@style/AppTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity2"
-            android:theme="@style/AppTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/MyTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

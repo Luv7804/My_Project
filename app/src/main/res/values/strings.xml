@@ -3,4 +3,11 @@
     <string name="hint_wt">Enter Weight In KG.</string>
     <string name="hint_htF">Enter Height In Feet</string>
     <string name="hint_htI">Enter Height In Inches</string>
+    <string name="title_activity_dainik_bhav">DainikBhav</string>
+    <string name="tab_text_1">જણસી</string>
+    <string name="tab_text_2">શાકભાજી</string>
+    <string name="tab_text_3">ફળ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_daily_price">DailyPrice</string>
 </resources>
