@@ -14,9 +14,9 @@ public class MyFragmentAdpter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        if (position == 1) {
+        if (position == 0) {
             return new JanasiFragment();
-        } else if (position == 2) {
+        } else if (position == 1) {
             return new Sakbhaji_Fragment();
         } else {
             return new FalFragment();
