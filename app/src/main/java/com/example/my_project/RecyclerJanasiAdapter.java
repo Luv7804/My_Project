@@ -1,4 +1,16 @@
+package com.example.my_project;
+
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class RecyclerJansiAdapter<JanasiModel> extends RecyclerView.Adapter<RecyclerJansiAdapter.ViewHolder> {
     Context context;
@@ -10,6 +22,7 @@ public class RecyclerJansiAdapter<JanasiModel> extends RecyclerView.Adapter<Recy
 
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -20,9 +33,10 @@ public class RecyclerJansiAdapter<JanasiModel> extends RecyclerView.Adapter<Recy
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imgContact.setImageResource(arrayContact.get(position).img);
-        holder.txtName.setText(arrayContact.get(position).name);
-        holder.txtNumber.setText(arrayContact.get(position).number);
+//            holder.imgContact.setImageResource(arrayContact.get(position).imgs);
+        holder.txtName.setText((CharSequence) arrayContact.get(position));
+//            holder.txtNumber.setText(arrayContact.get(position).number);
+
     }
 
     @Override
