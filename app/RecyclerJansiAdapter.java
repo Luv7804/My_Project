@@ -1,10 +1,10 @@
 import android.content.Context;
 
-public class RecyclerJansiAdapter<ContactModel> extends RecyclerView.Adapter<RecyclerJansiAdapter.ViewHolder> {
+public class RecyclerJansiAdapter<JanasiModel> extends RecyclerView.Adapter<RecyclerJansiAdapter.ViewHolder> {
     Context context;
-    ArrayList<ContactModel> arrayContact;
+    ArrayList<JanasiModel> arrayContact;
 
-    RecyclerJansiAdapter(Context context, ArrayList<ContactModel> arrayContact) {
+    RecyclerJansiAdapter(Context context, ArrayList<JanasiModel> arrayContact) {
         this.context = context;
         this.arrayContact = arrayContact;
 
