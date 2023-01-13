@@ -17,7 +17,7 @@ public class MyFragmentAdpter extends FragmentStateAdapter {
         if (position == 0) {
             return new JanasiFragment();
         } else if (position == 1) {
-            return new Sakbhaji_Fragment();
+            return new SakbhajiFragment();
         } else {
             return new FalFragment();
         }
