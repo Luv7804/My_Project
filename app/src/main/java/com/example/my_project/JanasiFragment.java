@@ -23,12 +23,7 @@ public class JanasiFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
-
-}
-
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,14 +53,15 @@ public class JanasiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_janasi, container, false)
+        View view = inflater.inflate(R.layout.fragment_janasi, container, false);
         recyclerView = view.findViewById(R.id.recyclerContact);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         arrContact.add(new JanasiModel(R.drawable.i11, "Chintan Viradiya", "99245634545"));
         arrContact.add(new JanasiModel(R.drawable.i12, "Chetan Patel", "96745634584"));
         arrContact.add(new JanasiModel(R.drawable.i22, "Manan Kapadiya", "77245634594"));
         arrContact.add(new JanasiModel(R.drawable.i21, "Kamal Zala", "77895634599"));
-        RecyclerJanasiAdapter adapter = new RecyclerJanasiAdapter(this, arrContact);
+        RecyclerJanasiAdapter adapter = new RecyclerJanasiAdapter(getContext(), arrContact);
         recyclerView.setAdapter(adapter);
+        return view;
     }
 }

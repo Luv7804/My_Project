@@ -1,13 +1,13 @@
 package com.example.my_project;
 
 public class JanasiModel {
-    int imgs;
+    int img;
     String name, number;
 
-    public JanasiModel(int imgs, String name, String number) {
+    public JanasiModel(int img, String name, String number) {
         this.name = name;
         this.number = number;
-        this.imgs = imgs;
+        this.img = img;
 
     }
 }
