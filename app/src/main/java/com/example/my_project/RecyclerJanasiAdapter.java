@@ -35,7 +35,7 @@ public class RecyclerJanasiAdapter extends RecyclerView.Adapter<RecyclerJanasiAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imgContact.setImageResource(arrayContact.get(position).img);
-        holder.txtName.setText(arrayContact.get(position).name);
+//        holder.txtName.setText(arrayContact.get(position).name);
         holder.txtNumber.setText(arrayContact.get(position).number);
         setAnimation(holder.itemView, position);
     }
