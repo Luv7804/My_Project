@@ -19,7 +19,7 @@
             android:name=".DainikBhav"
             android:exported="false"></activity>
         <activity
-            android:name=".MainActivity4"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity3"
@@ -30,7 +30,7 @@
             android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity4"
             android:exported="true"
             android:theme="@style/MyTheme">
             <intent-filter>

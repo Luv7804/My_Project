@@ -1,5 +1,6 @@
 package com.example.my_project;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class JanasiFragment extends Fragment {
 
     RecyclerView recyclerView;
-    ArrayList<JanasiModel> arrContact = new ArrayList<>();
+    ArrayList<JanasiModel> arrJanasi = new ArrayList<>();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,18 +50,52 @@ public class JanasiFragment extends Fragment {
         return fragment;
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_janasi, container, false);
-        recyclerView = view.findViewById(R.id.recyclerContact);
+        recyclerView = view.findViewById(R.id.recyclerJanasi);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        arrContact.add(new JanasiModel(R.drawable.i11, "Chintan Viradiya", "99245634545"));
-        arrContact.add(new JanasiModel(R.drawable.i12, "Chetan Patel", "96745634584"));
-        arrContact.add(new JanasiModel(R.drawable.i22, "Manan Kapadiya", "77245634594"));
-        arrContact.add(new JanasiModel(R.drawable.i21, "Kamal Zala", "77895634599"));
-        RecyclerJanasiAdapter adapter = new RecyclerJanasiAdapter(getContext(), arrContact);
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
+        arrJanasi.add(new JanasiModel("ઘઉં ટુકડા", "514", "608"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        arrJanasi.add(new JanasiModel("કપાસ બી.ટી.", "1501", "1731"));
+        RecyclerJanasiAdapter adapter = new RecyclerJanasiAdapter(getContext(), arrJanasi);
         recyclerView.setAdapter(adapter);
         return view;
     }

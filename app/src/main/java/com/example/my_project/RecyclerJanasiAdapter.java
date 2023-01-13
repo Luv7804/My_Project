@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,33 +15,33 @@ import java.util.ArrayList;
 
 public class RecyclerJanasiAdapter extends RecyclerView.Adapter<RecyclerJanasiAdapter.ViewHolder> {
     Context context;
-    ArrayList<JanasiModel> arrayContact;
+    ArrayList<JanasiModel> arrayJanasi;
     int lastposition = -1;
 
-    RecyclerJanasiAdapter(Context context, ArrayList<JanasiModel> arrayContact) {
+    RecyclerJanasiAdapter(Context context, ArrayList<JanasiModel> arrayJanasi) {
         this.context = context;
-        this.arrayContact = arrayContact;
+        this.arrayJanasi = arrayJanasi;
 
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_dainik_bhav, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.janasi_row, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imgContact.setImageResource(arrayContact.get(position).img);
-//        holder.txtName.setText(arrayContact.get(position).name);
-        holder.txtNumber.setText(arrayContact.get(position).number);
+        holder.janasiName.setText(arrayJanasi.get(position).janasiname);
+        holder.lowPrice.setText(arrayJanasi.get(position).low);
+        holder.highPrice.setText(arrayJanasi.get(position).high);
         setAnimation(holder.itemView, position);
     }
 
     @Override
     public int getItemCount() {
-        return arrayContact.size();
+        return arrayJanasi.size();
     }
 
     private void setAnimation(View viewToAnimate, int position) {
@@ -54,14 +53,13 @@ public class RecyclerJanasiAdapter extends RecyclerView.Adapter<RecyclerJanasiAd
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName, txtNumber;
-        ImageView imgContact;
+        TextView janasiName, lowPrice, highPrice;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtName = itemView.findViewById(R.id.txtName);
-            txtNumber = itemView.findViewById(R.id.txtNumber);
-            imgContact = itemView.findViewById(R.id.imgContact);
+            janasiName = itemView.findViewById(R.id.janasiName);
+            lowPrice = itemView.findViewById(R.id.lowPrice);
+            highPrice = itemView.findViewById(R.id.highPrice);
         }
     }
 }
