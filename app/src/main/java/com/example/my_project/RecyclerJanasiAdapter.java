@@ -53,7 +53,7 @@ public class RecyclerJanasiAdapter extends RecyclerView.Adapter<RecyclerJanasiAd
         }
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtName, txtNumber;
         ImageView imgContact;
 
