@@ -10,11 +10,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 
 public class JanasiFragment extends Fragment {
 
+    FloatingActionButton floatingActionButton;
     RecyclerView recyclerView;
     ArrayList<JanasiModel> arrJanasi = new ArrayList<>();
 

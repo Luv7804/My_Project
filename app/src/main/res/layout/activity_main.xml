@@ -19,4 +19,5 @@
         android:text="A.P.M.C. \nશ્રી ખેતીવાડી ઉત્પન્ન બજાર સમિતિ મોટા મહીકા"
         android:textAlignment="center"
         android:textSize="40dp" />
+
 </LinearLayout>
