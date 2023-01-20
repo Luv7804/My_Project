@@ -10,14 +10,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 
 
 public class JanasiFragment extends Fragment {
-
-    FloatingActionButton floatingActionButton;
     RecyclerView recyclerView;
     ArrayList<JanasiModel> arrJanasi = new ArrayList<>();
 
@@ -27,6 +23,8 @@ public class JanasiFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     // TODO: Rename parameter arguments, choose names that match
@@ -44,7 +42,7 @@ public class JanasiFragment extends Fragment {
 
 
     // TODO: Rename and change types and number of parameters
-    public static JanasiFragment newInstance(String param1, String param2) {
+    public JanasiFragment newInstance(String param1, String param2) {
         JanasiFragment fragment = new JanasiFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -59,6 +57,7 @@ public class JanasiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_janasi, container, false);
+//
         recyclerView = view.findViewById(R.id.recyclerJanasi);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
