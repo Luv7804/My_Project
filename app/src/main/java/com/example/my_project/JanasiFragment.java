@@ -1,6 +1,7 @@
 package com.example.my_project;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +11,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 
 public class JanasiFragment extends Fragment {
+    FloatingActionButton floatingActionButton;
     RecyclerView recyclerView;
     ArrayList<JanasiModel> arrJanasi = new ArrayList<>();
 
@@ -58,6 +62,14 @@ public class JanasiFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_janasi, container, false);
 //
+        floatingActionButton = view.findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iNext = new Intent(getActivity(), AddDailyData.class);
+                startActivity(iNext);
+            }
+        });
         recyclerView = view.findViewById(R.id.recyclerJanasi);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         arrJanasi.add(new JanasiModel("ઘઉં લોકવાન", "510", "582"));
