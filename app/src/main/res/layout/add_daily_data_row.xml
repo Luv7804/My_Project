@@ -1,7 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -18,32 +22,43 @@
             <TableRow>
 
                 <TextView
-                    android:id="@+id/janasiName"
-                    android:layout_width="110dp"
+                    android:id="@+id/textViewExpName"
+                    android:layout_width="0dp"
                     android:layout_column="1"
                     android:gravity="left"
                     android:text="જણસી"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
-                <!--                <EditText-->
-                <!--                    android:id="@+id/lowPrice"-->
-                <!--                    android:layout_width="0dp"-->
-                <!--                    android:layout_column="1"-->
-                <!--                    android:gravity="center"-->
-                <!--                    android:hint="નીચોભાવ"-->
-                <!--                    android:textSize="16dp"-->
-                <!--                    android:textStyle="bold" />-->
 
-                <!--                <EditText-->
-                <!--                    android:id="@+id/highPrice"-->
-                <!--                    android:layout_width="0dp"-->
-                <!--                    android:layout_column="1"-->
-                <!--                    android:gravity="center"-->
-                <!--                    android:hint="ઊંચોભાવ"-->
-                <!--                    android:textSize="16dp"-->
-                <!--                    android:textStyle="bold" />-->
+                <EditText
+                    android:id="@+id/ExpHeld"
+                    android:layout_width="0dp"
+                    android:layout_column="1"
+                    android:gravity="center"
+                    android:hint="નીચો ભાવ"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/ExpHeld2"
+                    android:layout_width="0dp"
+                    android:layout_column="1"
+                    android:gravity="center"
+                    android:hint="ઊંચો ભાવ"
+                    android:inputType="number" />
+
+
             </TableRow>
+
+            <Button
+                android:id="@+id/ExpBimageSelect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select Image"
+                android:textSize="6dp"
+                android:visibility="gone"
+                tools:ignore="DuplicateIds" />
         </TableLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
