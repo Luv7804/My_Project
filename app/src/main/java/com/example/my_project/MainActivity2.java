@@ -1,70 +1,52 @@
 package com.example.my_project;
 
-import static android.view.View.*;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.Animatable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.math.BigInteger;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
-    TextView check2,name,enno;
-    Button move;
+    Button sign_up;
+    EditText email, pass, repass;
+    TextView sign_in;
     @SuppressLint("MissingInflatedId")
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        check2 = findViewById(R.id.textView);
-        name = findViewById(R.id.name);
-        move = findViewById(R.id.move);
-
-        move.setOnClickListener(new OnClickListener() {
+        sign_up = findViewById(R.id.signup);
+        sign_in = findViewById(R.id.sign_in);
+        email = findViewById(R.id.email);
+        pass = findViewById(R.id.pass);
+        repass = findViewById(R.id.repass);
+        Intent iNext = new Intent(MainActivity2.this, MainActivity4.class);
+        Intent iNext2 = new Intent(MainActivity2.this, MainActivity3.class);
+        sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Animation animate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move);
-                Animation ani = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.alpha);
-                name.startAnimation(ani);
-//                name.startAnimation(animate);
+                String emailId = email.getText().toString();
+                String password = pass.getText().toString();
+                String repassword = repass.getText().toString();
+                if (password.equals(repassword)) {
+                    iNext.putExtra("email", emailId);
+                    iNext.putExtra("password", password);
+                    startActivity(iNext);
+                } else {
+                    Toast.makeText(MainActivity2.this, "Password Does not Match !!!" + password + "=" + repassword, Toast.LENGTH_SHORT).show();
 
+                }
             }
         });
-
-        Intent fromact = getIntent();
-        String myName = fromact.getStringExtra("name");
-        int enNumber =fromact.getIntExtra("enno",0);
-//        int en = fromact.getIntExtra("enno",0);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                name.setText(myName+"="+enNumber);
-
-//                enno.setText(en);
-
-
-            }
-        },2000);
-
-
-        check2.setOnClickListener(new OnClickListener() {
+        sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity2.this, "TicTacToe", Toast.LENGTH_SHORT).show();
-
-                startActivity(new Intent(MainActivity2.this,MainActivity3.class));
+                startActivity(iNext2);
             }
         });
-
-        }
+    }
     }
